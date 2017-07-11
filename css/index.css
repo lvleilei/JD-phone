@@ -1,0 +1,233 @@
+body {
+  background-color: #eee;
+}
+.jd-layout {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+.jd-header {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.jd-header .header-in {
+  position: relative;
+  height: 40px;
+  max-width: 640px;
+  min-width: 320px;
+  background-color: rgba(201, 21, 35, 0);
+  margin: 0 auto;
+  padding: 0 50px 0 70px;
+}
+.jd-header .header-in form {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding-top: 5px;
+}
+.jd-header .header-in form .icon-search {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-position: -60px -109px;
+}
+.jd-header .header-in form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 30px;
+}
+.jd-header .header-in .icon-logo {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 60px;
+  height: 33px;
+  background-position: 0 -103px;
+}
+.jd-header .header-in .login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+.jd-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.jd-banner ul {
+  width: 1000%;
+  -webkit-transform: translateX(-10%);
+  transform: translateX(-10%);
+}
+.jd-banner ul li {
+  float: left;
+  width: 10%;
+}
+.jd-banner ul li a {
+  display: block;
+}
+.jd-banner ul li a img {
+  display: block;
+  width: 100%;
+}
+.jd-banner ol {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.jd-banner ol li {
+  float: left;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.jd-banner ol li.active {
+  background-color: #fff;
+}
+.jd-nav {
+  padding: 30px 0;
+  border-bottom: 1px solid red;
+}
+.jd-nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.jd-nav ul li a img {
+  width: 40px;
+}
+.jd-product {
+  padding: 10px;
+  background-color: #cccccc;
+}
+.jd-product .product {
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px 0 #333;
+}
+.jd-product .product .product-title {
+  height: 32px;
+  border-bottom: 1px solid #cccccc;
+  line-height: 32px;
+}
+.jd-product .product .product-title h4 {
+  position: relative;
+  font-weight: normal;
+  padding-left: 30px;
+}
+.jd-product .product .product-title h4::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 3px;
+  height: 16px;
+  background-color: #f23030;
+}
+.jd-product .product .product-content > a {
+  width: 50%;
+}
+.jd-product .product .product-content > a > img {
+  width: 100%;
+  display: block;
+}
+.jd-product .sk {
+  padding-bottom: 10px;
+}
+.jd-product .sk .product-title .sk-logo {
+  width: 16px;
+  height: 20px;
+  background: url(../images/seckill-icon.png) no-repeat;
+  -webkit-background-size: 16px 20px;
+  background-size: 16px 20px;
+}
+.jd-product .sk .product-title .sk-text {
+  color: #f23030;
+}
+.jd-product .sk .product-title .sk-time span {
+  float: left;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  margin-right: 5px;
+}
+.jd-product .sk .product-title .sk-time span:nth-child(3n) {
+  background-color: #fff;
+  color: #000;
+  width: 8px;
+}
+.jd-product .sk .product-content {
+  padding-top: 10px;
+}
+.jd-product .sk .product-content ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.jd-product .sk .product-content ul li:nth-last-child(2) a {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.jd-product .sk .product-content ul li a {
+  display: block;
+}
+.jd-product .sk .product-content ul li a img {
+  width: 65%;
+}
+.jd-product .sk .product-content ul li p {
+  font-size: 12px;
+}
+.jd-product .sk .product-content ul li p:nth-child(2) {
+  color: #f23030;
+}
+.jd-product .sk .product-content ul li p:nth-child(3) {
+  text-decoration: line-through;
+}
+.jd-footer {
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.jd-footer .footer-in {
+  height: 44px;
+  max-width: 640px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.jd-footer .footer-in ul li {
+  float: left;
+  width: 25%;
+}
+.jd-footer .footer-in ul li a {
+  display: block;
+  text-align: center;
+}
+.jd-footer .footer-in ul li a img {
+  height: 44px;
+}

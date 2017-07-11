@@ -1,0 +1,306 @@
+//.box {
+//  width: 100px;
+//  height: 100px;
+//  background-color: pink;
+//}
+
+//定义颜色变量：京东红
+@jdc: #f23030;
+
+body {
+  background-color: #eee;
+}
+.jd-layout {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+
+
+
+////图标公共样式——精灵图-------赋值或剪切到base里面 所有页面都能用
+//[class^="icon-"]{
+//  background: url(../images/sprites.png) no-repeat -60px -109px;
+//  //压缩图片
+//  -webkit-background-size: 200px 200px;
+//  background-size: 200px 200px;
+//}
+
+//----------------头部  两边固定 中间自适应 。两边定位 中间用padding挤
+.jd-header {
+  height: 40px;
+  width: 100%;
+  //background-color: pink;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  .header-in {
+    position: relative;
+    height: 40px;
+    max-width: 640px;
+    min-width: 320px;
+    background-color: rgba(201, 21, 35, 0);
+    margin: 0 auto;
+    padding: 0 50px 0 70px;
+    //搜索框
+    form {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      padding-top: 5px;
+      //搜索图标
+      .icon-search {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        background-position: -60px -109px;
+        //background: url(../images/sprites.png) no-repeat -60px -109px;
+        ////压缩图片
+        //-webkit-background-size: 200px 200px;
+        //        background-size: 200px 200px;
+        ////background-color: skyblue;
+      }
+      //搜索框
+      input {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        padding-left: 30px;
+      }
+    }
+    //logo部分
+    .icon-logo {
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      width: 60px;
+      height: 33px;
+      background-position: 0 -103px;
+      //background: url(../images/sprites.png) no-repeat 0 -103px;
+      ////压缩图片
+      //-webkit-background-size: 200px 200px;
+      //        background-size: 200px 200px;
+      ////background-color: skyblue;
+    }
+    //登录按钮
+    .login {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      color: #fff;
+    }
+  }
+
+}
+
+
+//--------------------banner轮播图
+.jd-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  ul {
+    width: 1000%;
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    li {
+      float: left;
+      width: 10%;
+      a {
+        display: block;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  ol {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    li {
+      float: left;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+    li.active {
+      background-color: #fff;
+    }
+  }
+}
+
+
+//--------------------导航
+.jd-nav {
+  padding: 30px 0;
+  border-bottom: 1px solid red;
+  ul {
+    li {
+      float: left;
+      width: 25%;
+      text-align: center;
+      margin-bottom: 20px;
+      a {
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+//--------------------产品模块
+.jd-product {
+  padding: 10px;
+  background-color: #cccccc;
+  //盒子公共样式
+  .product {
+    //height: 200px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 0 #333;
+    .product-title {
+      height: 32px;
+      border-bottom: 1px solid #cccccc;
+      line-height: 32px;
+      h4 {
+        position: relative;
+        font-weight: normal;
+        padding-left: 30px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 8px;
+          width: 3px;
+          height: 16px;
+          background-color: @jdc;
+        }
+      }
+    }
+    //内容部分
+    .product-content {
+      >a {
+        width: 50%;
+        >img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  //秒杀盒子
+  .sk {
+    padding-bottom: 10px;
+    .product-title {
+      .sk-logo {
+        width: 16px;
+        height: 20px;
+        background: url(../images/seckill-icon.png) no-repeat;
+        -webkit-background-size: 16px 20px;
+                background-size: 16px 20px;
+      }
+      .sk-text {
+        color: @jdc;
+      }
+      .sk-time {
+        span {
+          float: left;
+          width: 15px;
+          height: 15px;
+          background-color: #000;
+          color: #fff;
+          line-height: 15px;
+          text-align: center;
+          margin-right: 5px;
+          &:nth-child(3n) {
+            background-color: #fff;
+            color: #000;
+            width: 8px;
+          }
+        }
+      }
+    }
+    .product-content {
+      padding-top: 10px;
+      ul {
+        li {
+          float: left;
+          width: 33.33%;
+          text-align: center;
+          &:nth-last-child(2) {
+            a {
+              border-left: 1px solid #ccc;
+              border-right: 1px solid #ccc;
+            }
+          }
+          a{
+            display: block;
+            img{
+              width: 65%;
+            }
+          }
+          p {
+            font-size: 12px;
+            &:nth-child(2) {
+              color: @jdc;
+            }
+            &:nth-child(3) {
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//-------------------底部
+.jd-footer {
+  height: 44px;
+  //background-color: pink;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  .footer-in {
+    height: 44px;
+    max-width: 640px;
+    min-width: 320px;
+    background-color: #fff;
+    margin: 0 auto;
+    ul {
+      li {
+        float: left;
+        width: 25%;
+        a {
+          display: block;
+          text-align: center;
+          img {
+            height: 44px;
+          }
+        }
+      }
+    }
+  }
+
+}
